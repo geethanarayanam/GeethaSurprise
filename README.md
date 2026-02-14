@@ -86,7 +86,8 @@
 
     <div id="container">
         <div id="question-side">
-            <img src="your-photo.jpg" alt="Us" class="profile-img">
+            <img src=<img width="480" height="480" alt="image" src="https://github.com/user-attachments/assets/58b924a8-1132-4506-860c-8ca2a7614b60" />
+alt="Us" class="profile-img">
             <h1>Will you be my Valentine? 💖</h1>
             <div class="buttons">
                 <button id="yesBtn">Yes!</button>
