@@ -1,151 +1,154 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be My Valentine?</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* Romantic Background */
-            background-image: url('https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=2070&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            overflow: hidden;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geetha Surprise ❤️</title>
 
-        #container {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(5px);
-            padding: 2rem;
-            border-radius: 25px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-            text-align: center;
-            max-width: 85%;
-            z-index: 10;
-        }
+<style>
 
-        .profile-img {
-            width: 140px;
-            height: 140px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #ff4d6d;
-            margin-bottom: 1rem;
-        }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-        h1 { color: #d63384; font-size: 1.6rem; margin-bottom: 1.5rem; }
+  /* background hearts style */
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
 
-        .buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            align-items: center;
-            height: 60px;
-        }
+/* Card */
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 25px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
 
-        button {
-            padding: 12px 28px;
-            font-size: 1.1rem;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+/* Title */
+h1 {
+  color: #1e73be;
+  margin-bottom: 10px;
+}
 
-        #yesBtn { background-color: #ff4d6d; color: white; }
-        #noBtn { background-color: #adb5bd; color: white; position: relative; }
+/* Image container */
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 
-        .heart {
-            position: absolute;
-            color: #ff4d6d;
-            font-size: 20px;
-            pointer-events: none;
-            animation: fall linear forwards;
-            z-index: 1;
-        }
+/* Image style */
+.profile-img {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  animation: fadeIn 1.2s ease-in-out;
+}
 
-        @keyframes fall {
-            to { transform: translateY(110vh) rotate(360deg); }
-        }
+/* Question text */
+.question {
+  font-size: 26px;
+  color: #ff4081;
+  margin: 15px 0;
+  font-weight: bold;
+}
 
-        #celebration { display: none; }
-    </style>
+/* Buttons */
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  border: none;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+.yes-btn {
+  background: #ff4d6d;
+  color: white;
+}
+
+.yes-btn:hover {
+  transform: scale(1.1);
+}
+
+.no-btn {
+  background: #9aa0a6;
+  color: white;
+  position: relative;
+}
+
+/* animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+</style>
 </head>
+
 <body>
 
-    <audio id="romanticMusic" loop>
-        <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
-    </audio>
+<div class="card">
 
-    <div id="container">
-        <div id="question-side">
-             height="480" alt="image" 
-            <h1>Will you be my Valentine👩‍❤️‍👨? 💖</h1>
-            <div class="buttons">
-                <button id="yesBtn">Yes!</button>
-                <button id="noBtn">No</button>
-            </div>
-        </div>
+  <h1>Geetha Surprise 💖</h1>
 
-        <div id="celebration">
-            <h1 style="color: #d63384;">Yay! I love you! 🥰</h1>
-            <p>Can't wait for our date!</p>
-        </div>
-    </div>
+  <!-- IMAGE -->
+  <div class="image-container">
+    <img
+      src="https://github.com/user-attachments/assets/58b924a8-1132-4506-860c-8ca2a7614b60"
+      alt="Us"
+      class="profile-img">
+  </div>
 
-    <script>
-        const yesBtn = document.getElementById('yesBtn');
-        const noBtn = document.getElementById('noBtn');
-        const questionSide = document.getElementById('question-side');
-        const celebration = document.getElementById('celebration');
-        const music = document.getElementById('romanticMusic');
+  <!-- QUESTION -->
+  <div class="question">
+    Will you be my Valentine? 💝
+  </div>
 
-        // Play music on any interaction (required by browsers)
-        function startMusic() {
-            music.play().catch(e => console.log("Audio waiting for interaction"));
-        }
+  <!-- BUTTONS -->
+  <div class="buttons">
+    <button class="yes-btn" onclick="sayYes()">Yes!</button>
+    <button class="no-btn" id="noBtn">No</button>
+  </div>
 
-        // Runaway Button Logic
-        function moveButton() {
-            startMusic();
-            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
-            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
-            noBtn.style.position = 'fixed';
-            noBtn.style.left = x + 'px';
-            noBtn.style.top = y + 'px';
-        }
+</div>
 
-        noBtn.addEventListener('mouseover', moveButton);
-        noBtn.addEventListener('touchstart', (e) => {
-            e.preventDefault();
-            moveButton();
-        });
+<script>
 
-        // Celebration Logic
-        yesBtn.addEventListener('click', () => {
-            startMusic();
-            questionSide.style.display = 'none';
-            celebration.style.display = 'block';
-            setInterval(createHeart, 150);
-        });
+/* YES button */
+function sayYes() {
+  alert("Yay ❤️ I knew you'd say YES! 💕");
+}
 
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
-            heart.innerHTML = '❤️';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.top = '-20px';
-            heart.style.animationDuration = Math.random() * 2 + 3 + 's';
-            document.body.appendChild(heart);
-            setTimeout(() => { heart.remove(); }, 5000);
-        }
-    </script>
+/* Moving NO button 😄 */
+const noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseover", () => {
+  const x = Math.random() * 200 - 100;
+  const y = Math.random() * 200 - 100;
+  noBtn.style.transform = `translate(${x}px, ${y}px)`;
+});
+
+</script>
+
 </body>
 </html>
