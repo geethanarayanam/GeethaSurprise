@@ -86,7 +86,7 @@
 
     <div id="container">
         <div id="question-side">
-             height="480" alt="image" src="https://github.com/user-attachments/assets/58b924a8-1132-4506-860c-8ca2a7614b60" /
+             height="480" alt="image" 
             <h1>Will you be my Valentine👩‍❤️‍👨? 💖</h1>
             <div class="buttons">
                 <button id="yesBtn">Yes!</button>
@@ -95,7 +95,6 @@
         </div>
 
         <div id="celebration">
-            <img src="happy-us.jpg" alt="Yay" class="profile-img">
             <h1 style="color: #d63384;">Yay! I love you! 🥰</h1>
             <p>Can't wait for our date!</p>
         </div>
